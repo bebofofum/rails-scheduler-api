@@ -46,6 +46,6 @@ class StreamsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def stream_params
-      params.require(:stream).permit(:name, :description, :schedule, :schedule_dates, :schedule_time)
+      params.require(:stream).permit(:name, :description, :schedule, :schedule_dates, :schedule_time, :stream_graphic)
     end
 end
