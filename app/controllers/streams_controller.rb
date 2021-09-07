@@ -15,7 +15,7 @@ class StreamsController < ApplicationController
 
   # POST /streams
   def create
-    @stream = Stream.new(stream_params)
+    @stream = current_user.streams.build(stream_params)
 
     if @stream.save
       render json: @stream, status: :created, location: @stream
