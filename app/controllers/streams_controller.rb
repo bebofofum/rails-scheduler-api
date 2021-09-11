@@ -10,7 +10,8 @@ class StreamsController < ApplicationController
 
   # GET /streams/1
   def show
-    render json: @stream
+    # render json: @stream
+    render json: StreamSerializer.new(@stream)
   end
 
   # POST /streams
