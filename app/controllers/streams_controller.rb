@@ -5,7 +5,8 @@ class StreamsController < ApplicationController
   def index
     @streams = Stream.all
 
-    render json: @streams
+    # render json: @streams
+    render json: StreamSerializer.new(@streams)
   end
 
   # GET /streams/1
