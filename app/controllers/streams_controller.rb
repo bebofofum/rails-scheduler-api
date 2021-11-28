@@ -38,6 +38,7 @@ class StreamsController < ApplicationController
   # DELETE /streams/1
   def destroy
     @stream.destroy
+    render json: {message: "Deleted successfully"}
   end
 
   private
